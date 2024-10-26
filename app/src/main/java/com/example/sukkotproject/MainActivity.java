@@ -34,12 +34,12 @@ public class MainActivity extends AppCompatActivity {
         txt.setText("");
         EditText hint = findViewById(R.id.Hint);
         Button changeTxt = findViewById(R.id.button);
-        Button clr = findViewById(R.id.button2);
-        clr.setOnClickListener(new View.OnClickListener() {
+        Button color = findViewById(R.id.button2);
+        color.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 int[] c = {Color.RED, Color.BLUE, Color.BLACK};
-                int c2 = c[r.nextInt(3)];
+                int c2 = c[r.nextInt(c.length)];
                 txt.setTextColor(c2);
             }
         });
@@ -47,11 +47,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String et = hint.getText().toString();
-                String x2 = x[r.nextInt(11)];
+                String x2 = x[r.nextInt(x.length)];
                 txt.setText(et + x2);
             }
         });
-
-
     }
 }
