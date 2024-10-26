@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        int i = 0;
         String[] x = {"! Wow!", "!", "?", "?!", "...", "...?", " this", "? Sure!", "? No", "? Yes", "? Maybe"};
         Random r = new Random();
         TextView txt = findViewById(R.id.textView);
@@ -39,21 +38,9 @@ public class MainActivity extends AppCompatActivity {
         clr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                while(i<3)
-                {
-                if(i == 0)
-                {
-                    txt.setTextColor(Color.RED);
-                }
-                else if(i == 1)
-                {
-                    txt.setTextColor(Color.BLUE);
-                }
-                else if(i == 2)
-                {
-                    txt.setTextColor(Color.BLACK);
-                }
-                }
+                int[] c = {Color.RED, Color.BLUE, Color.BLACK};
+                int c2 = c[r.nextInt(3)];
+                txt.setTextColor(c2);
             }
         });
         changeTxt.setOnClickListener(new View.OnClickListener() {
