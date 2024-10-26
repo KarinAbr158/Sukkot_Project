@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 int[] c = {Color.RED, Color.BLUE, Color.BLACK};
                 int c2 = c[r.nextInt(3)];
                 txt.setTextColor(c2);
+
             }
         });
         changeTxt.setOnClickListener(new View.OnClickListener() {
